@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python cache
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Dataset - DO NOT upload
+Brain Tumor Detection Dataset/
+dataset/
+data/
+
+# Uploaded images
+uploads/
+Backend/uploads/
+
+# Secrets
+.env
+*.env
+
+# Jupyter temporary files
+*.ipynb_checkpoints

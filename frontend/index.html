@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Brain Tumor Detection System</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+
+            <div class="icon">
+                🧠
+            </div>
+
+            <h1>Brain Tumor Detection</h1>
+
+            <p>
+                MRI Image Classification using HOG + SVM
+            </p>
+
+        </header>
+
+
+        <!-- Upload Card -->
+        <div class="card">
+
+            <h2>Upload MRI Image</h2>
+
+            <p class="instruction">
+                Select an MRI brain image in JPG, JPEG or PNG format.
+            </p>
+
+
+            <!-- File Input -->
+            <input
+                type="file"
+                id="imageInput"
+                accept=".jpg,.jpeg,.png"
+            >
+
+
+            <!-- Image Preview -->
+            <div id="previewContainer" class="preview-container">
+
+                <div id="previewPlaceholder">
+                    <span>📷</span>
+                    <p>Image preview will appear here</p>
+                </div>
+
+                <img
+                    id="imagePreview"
+                    alt="MRI Preview"
+                >
+
+            </div>
+
+
+            <!-- Analyze Button -->
+            <button
+                id="analyzeButton"
+                disabled
+            >
+                Analyze MRI
+            </button>
+
+
+            <!-- Loading -->
+            <div
+                id="loading"
+                class="loading"
+            >
+                <div class="spinner"></div>
+
+                <p>
+                    Analyzing MRI image...
+                </p>
+            </div>
+
+
+            <!-- Error -->
+            <div
+                id="errorMessage"
+                class="error"
+            >
+            </div>
+
+
+            <!-- Result -->
+            <div
+                id="resultContainer"
+                class="result-container"
+            >
+
+                <h2>Analysis Result</h2>
+
+                <div
+                    id="resultIcon"
+                    class="result-icon"
+                >
+                </div>
+
+                <h3 id="prediction">
+                </h3>
+
+                <p class="probability-label">
+                    Model Score
+                </p>
+
+                <div class="probability-bar">
+
+                    <div
+                        id="probabilityBar"
+                        class="probability-fill"
+                    >
+                    </div>
+
+                </div>
+
+                <p
+                    id="probability"
+                    class="probability"
+                >
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Information -->
+        <div class="info-card">
+
+            <h2>How It Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <span>1</span>
+
+                    <div>
+                        <h3>Upload</h3>
+                        <p>
+                            Upload an MRI brain image.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>2</span>
+
+                    <div>
+                        <h3>HOG Features</h3>
+                        <p>
+                            The image is processed and HOG
+                            features are extracted.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>3</span>
+
+                    <div>
+                        <h3>SVM Classification</h3>
+                        <p>
+                            The trained SVM model classifies
+                            the MRI image.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>4</span>
+
+                    <div>
+                        <h3>Result</h3>
+                        <p>
+                            The predicted class and model
+                            score are displayed.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Brain Tumor Detection System
+                | HOG + SVM
+            </p>
+
+            <p class="disclaimer">
+                For educational and demonstration purposes only.
+                This system is not a medical diagnosis.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
