@@ -6,7 +6,7 @@
 
 // Flask API address
 
-const API_URL = "http://127.0.0.1:5000/predict";
+const API_URL = "/predict";
 
 
 // Get HTML elements

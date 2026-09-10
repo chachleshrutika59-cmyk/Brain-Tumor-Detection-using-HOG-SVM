@@ -32,10 +32,55 @@ MODEL_PATH = os.path.join(
 
 
 # =====================================================
+# CHECK PATHS
+# =====================================================
+
+print("========================================")
+print("BASE DIR:", BASE_DIR)
+print("FRONTEND DIR:", FRONTEND_DIR)
+print("MODEL PATH:", MODEL_PATH)
+
+print(
+    "index.html exists:",
+    os.path.exists(
+        os.path.join(FRONTEND_DIR, "index.html")
+    )
+)
+
+print(
+    "style.css exists:",
+    os.path.exists(
+        os.path.join(FRONTEND_DIR, "style.css")
+    )
+)
+
+print(
+    "script.js exists:",
+    os.path.exists(
+        os.path.join(FRONTEND_DIR, "script.js")
+    )
+)
+
+print(
+    "model exists:",
+    os.path.exists(MODEL_PATH)
+)
+
+print("========================================")
+
+
+# =====================================================
 # FLASK APP
 # =====================================================
 
-app = Flask(__name__)
+# IMPORTANT:
+# Tell Flask that FRONTEND_DIR is the static folder.
+
+app = Flask(
+    __name__,
+    static_folder=FRONTEND_DIR,
+    static_url_path="/static"
+)
 
 CORS(app)
 
@@ -73,19 +118,6 @@ def home():
     return send_from_directory(
         FRONTEND_DIR,
         "index.html"
-    )
-
-
-# =====================================================
-# STATIC FILES
-# =====================================================
-
-@app.route("/static/<path:filename>")
-def static_files(filename):
-
-    return send_from_directory(
-        FRONTEND_DIR,
-        filename
     )
 
 
@@ -260,7 +292,6 @@ def predict():
 
             result = "Tumor Detected"
 
-
             if probabilities is not None:
 
                 score = float(
@@ -271,11 +302,9 @@ def predict():
 
                 score = 1.0
 
-
         else:
 
             result = "No Tumor"
-
 
             if probabilities is not None:
 
