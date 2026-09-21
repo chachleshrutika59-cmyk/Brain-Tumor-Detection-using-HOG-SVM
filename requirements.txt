@@ -1,7 +1,7 @@
 Flask
-numpy
-opencv-python-headless
-scikit-image
-scikit-learn
-joblib
+flask-cors
 Pillow
+scikit-image
+numpy
+joblib
+scikit-learn
