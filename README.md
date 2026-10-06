@@ -9,7 +9,7 @@ Absolutely — here is the **modified, polished README content** based on your a
 
 A machine learning web application that classifies brain MRI images into:
 
-- 🟢 No Tumor
+- 🟢 No Tumor 
 - 🔴 Tumor Detected
 
 The system uses **HOG (Histogram of Oriented Gradients)** for feature extraction and **SVM (Support Vector Machine)** for classification.
