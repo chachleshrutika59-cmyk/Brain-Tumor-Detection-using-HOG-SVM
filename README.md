@@ -584,3 +584,8 @@ This project demonstrates how traditional machine learning techniques such as **
 
 **One important correction I made:** your README says the dataset has **155 Tumor + 98 No Tumor = 253 images**, while your earlier training workflow had different counts after processing/augmentation. So this README keeps **253 as the dataset description**, rather than mixing training/augmented/test counts into the dataset total.
 ```
+
+
+
+add-screenshots folder to the github
+
