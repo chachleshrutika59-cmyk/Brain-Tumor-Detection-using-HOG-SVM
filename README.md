@@ -1,3 +1,7 @@
+
+
+
+
 Absolutely — here is the **modified, polished README content** based on your actual project details, including your **HOG + SVM model, Flask UI, dataset, project structure, and results**. You can directly paste this into `README.md`.
 
 ````markdown
